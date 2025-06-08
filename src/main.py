@@ -12,7 +12,7 @@ import gradio as gr
 import librosa
 import numpy as np
 import soundfile as sf
-import sox
+import sys
 import yt_dlp
 from pedalboard import Pedalboard, Reverb, Compressor, HighpassFilter
 from pedalboard.io import AudioFile
@@ -133,17 +133,6 @@ def convert_to_stereo(audio_path):
     else:
         return audio_path
 
-
-def pitch_shift(audio_path, pitch_change):
-    output_path = f'{os.path.splitext(audio_path)[0]}_p{pitch_change}.wav'
-    if not os.path.exists(output_path):
-        y, sr = sf.read(audio_path)
-        tfm = sox.Transformer()
-        tfm.pitch(pitch_change)
-        y_shifted = tfm.build_array(input_array=y, sample_rate_in=sr)
-        sf.write(output_path, y_shifted, sr)
-
-    return output_path
 
 
 def get_hash(filepath):
