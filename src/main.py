@@ -18,7 +18,7 @@ from pedalboard import Pedalboard, Reverb, Compressor, HighpassFilter
 from pedalboard.io import AudioFile
 from pydub import AudioSegment
 
-from src.mdx import run_mdx
+from mdx import run_mdx
 from bfrvc import run_infer_script
 BASE_DIR = os.getcwd()
 
