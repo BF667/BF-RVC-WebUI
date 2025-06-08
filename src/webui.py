@@ -7,9 +7,9 @@ from argparse import ArgumentParser
 
 import gradio as gr
 
-from src.main import song_cover_pipeline
+from main import song_cover_pipeline
 
-BASE_DIR = getcwd() 
+BASE_DIR = os.getcwd() 
 mdxnet_models_dir = os.path.join(BASE_DIR, 'mdxnet_models')
 rvc_models_dir = os.path.join(BASE_DIR, 'rvc_models')
 output_dir = os.path.join(BASE_DIR, 'song_output')
