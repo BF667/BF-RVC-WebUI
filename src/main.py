@@ -19,7 +19,7 @@ from pedalboard.io import AudioFile
 from pydub import AudioSegment
 
 from src.mdx import run_mdx
-from bfrvc import 
+from bfrvc import run_infer_script
 BASE_DIR = os.getcwd()
 
 mdxnet_models_dir = os.path.join(BASE_DIR, 'mdxnet_models')
